@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Baloo+Bhaijaan+2:wght@400..800&display=swap" rel="stylesheet">
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        body
+        {
+            background-color:#c1deee ;
+        }
+
+       
+        main{
+            height: 100vh;
+            display: flex;
+            justify-content:space-around;
+            align-items: center;
+
+        }
+        .left
+        {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            justify-content: center;
+            width: 50vw;
+            height: 100vh;
+            gap: 4vh;
+            background-color: #2a2b4a;
+            border-top-right-radius: 50%; 
+            border-bottom-right-radius:50%; 
+        }
+        .right
+        {
+            
+            width: 50vw;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+           
+        }
+
+        button{
+            width:34vw;
+            height: 50px;
+            background-color: #91c0da;
+            border: none;
+            border-radius:20px;
+            margin: 2vw;
+        }
+        button:hover{
+            background-color:#c1deee;
+            cursor: pointer;
+            color: black;
+        }
+        h1{
+            font-family: "Baloo Bhaijaan 2";
+            color: #ffb38a;
+        }
+        .heading
+        {
+            color: white;
+            display: flex;
+            flex-direction: column;
+            padding: 2vw;
+        }
+        h2,p{
+            font-family: sans-serif;
+            /* color: rgba(0, 0, 0, 0.781); */
+        }
+       .rimg
+       {
+        width:150px;
+        /* height: 24px; */
+       }
+       
+
+        @media screen and (max-width:635px) {
+            .right
+            {
+                display: none;
+
+            }
+            .left{
+               width: 100vw;
+               justify-content: flex-end;
+               padding-bottom: 15vh;
+               border-top-right-radius: 50%; 
+            border-bottom-right-radius:50%; 
+               
+            }
+            button
+            {
+                width: 50vw;
+            }
+            h1
+            {
+             
+           font-size: 24px;
+            }
+            main
+            {
+                height: 100vh;
+            }
+
+        }
+    </style>
+</head>
+<body>
+    
+
+    <main>
+       
+        <div class="left">
+        
+            <div class="heading">
+                <p>Build Your Perfect</p>
+                <h1>ATS-Friendly Resume </h1>
+                 <h2> Today!<h2>
+            </div>
+              
+            <button onclick="window.location.href='exp.htm'">Start Building</button>
+        </div>
+        <div class="right">
+            <img src="1.jpg" alt="">
+        </div>
+    </main>
+    <script>
+        let pagewidth=window.innerWidth;
+        let parent=document.querySelector(".left");
+            let newimg=document.createElement("img");
+        if(pagewidth<=635)
+        {
+            
+            newimg.classList.add("rimg");
+            newimg.src="d1.png";
+            parent.prepend(newimg);
+
+        }
+        if(pagewidth>635)
+        {
+            newimg.remove();
+        }
+
+
+        
+        
+    </script>
+    
+</body>
+</html>
